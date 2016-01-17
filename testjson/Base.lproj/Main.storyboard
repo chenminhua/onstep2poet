@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testjson" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +19,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2NN-vV-aBy">
+                                <rect key="frame" x="0.0" y="138" width="600" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="474722757.61128199">
+                                    <!--2016-01-17 11:25:57 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-lO-oa6">
+                                <rect key="frame" x="526" y="91" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="一步成诗"/>
+                                <connections>
+                                    <action selector="generator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSz-ik-Rib"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择您的生日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfL-8G-MNc">
+                                <rect key="frame" x="0.0" y="95" width="119" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="poem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7N-5e-hIj">
+                                <rect key="frame" x="214" y="382" width="162" height="181"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="ZLG-vp-QXm"/>
+                                    <constraint firstAttribute="width" constant="162" id="n0h-pZ-zPk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gk7-lO-oa6" secondAttribute="trailing" constant="-6" id="2St-Vs-g1W"/>
+                            <constraint firstItem="BfL-8G-MNc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4J9-zg-lIg"/>
+                            <constraint firstItem="X7N-5e-hIj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="214" id="EbN-uY-4FQ"/>
+                            <constraint firstItem="2NN-vV-aBy" firstAttribute="leading" secondItem="BfL-8G-MNc" secondAttribute="leading" id="Fi8-OX-Zgs"/>
+                            <constraint firstItem="Gk7-lO-oa6" firstAttribute="baseline" secondItem="BfL-8G-MNc" secondAttribute="baseline" id="HPP-iB-g5A"/>
+                            <constraint firstItem="X7N-5e-hIj" firstAttribute="top" secondItem="2NN-vV-aBy" secondAttribute="bottom" constant="28" id="KEf-Ky-jbg"/>
+                            <constraint firstAttribute="trailing" secondItem="2NN-vV-aBy" secondAttribute="trailing" id="g14-hJ-qxE"/>
+                            <constraint firstItem="2NN-vV-aBy" firstAttribute="top" secondItem="Gk7-lO-oa6" secondAttribute="bottom" constant="17" id="n37-GC-aAR"/>
+                            <constraint firstItem="Gk7-lO-oa6" firstAttribute="centerY" secondItem="BfL-8G-MNc" secondAttribute="centerY" id="ndm-zW-api"/>
+                            <constraint firstItem="BfL-8G-MNc" firstAttribute="baseline" secondItem="Gk7-lO-oa6" secondAttribute="firstBaseline" id="pDw-1C-aKN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X7N-5e-hIj" secondAttribute="bottom" constant="37" id="zOC-w4-xv1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="2NN-vV-aBy" id="hfL-dT-Z2H"/>
+                        <outlet property="poemLabel" destination="X7N-5e-hIj" id="NV4-t5-Vi8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="445" y="277"/>
         </scene>
     </scenes>
 </document>
